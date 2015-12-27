@@ -6,7 +6,8 @@ RUN apt-get update \
   && apt-get update \
   && apt-get install -y mysql-client \
   && apt-get install -y --force-yes ruby2.1 nodejs \
-  && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+  && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+  && ln -s /usr/bin/ruby2.1 /usr/bin/ruby
 RUN service apache start
 
 ENV PATH /root/.composer/vendor/bin:$PATH
