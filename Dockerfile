@@ -8,7 +8,7 @@ RUN apt-get update \
   && apt-get install -y --force-yes ruby2.1 nodejs \
   && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
   && ln -s /usr/bin/ruby2.1 /usr/bin/ruby
-RUN docker-php-ext-install curl mbstring mcrypt mysql \
+RUN docker-php-ext-install curl mbstring mcrypt mysql zip \
   && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
   && docker-php-ext-install gd
 RUN service apache2 start
