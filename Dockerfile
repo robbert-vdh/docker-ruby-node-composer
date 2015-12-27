@@ -6,6 +6,7 @@ RUN apt-get update \
   && apt-add-repository -y ppa:brightbox/ruby-ng \
   && apt-add-repository -y ppa:ondrej/php5-5.6 \
   && apt-get update \
+  && apt-get install -y mysql-client \
   && apt-get install -y --force-yes ruby2.2 nodejs php5 php5-curl php5-mcrypt php5-mysql php5-gd \
   && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
