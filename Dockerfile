@@ -13,5 +13,7 @@ RUN docker-php-ext-install curl mbstring mcrypt mysql \
   && docker-php-ext-install gd
 RUN service apache2 start
 
+COPY php.ini /usr/local/etc/php/
+
 ENV PATH /root/.composer/vendor/bin:$PATH
 
