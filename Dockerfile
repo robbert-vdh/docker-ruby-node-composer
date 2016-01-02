@@ -8,6 +8,7 @@ RUN apt-get install -y build-essential software-properties-common curl git pytho
 # Install ruby
 RUN apt-get install -y ruby2.1 \
   && ln -s /usr/bin/ruby2.1 /usr/bin/ruby
+  && ln -s /usr/bin/gem2.1 /usr/bin/gem
 
 # Install Node.js
 RUN curl -sL https://deb.nodesource.com/setup_5.x | bash - \
