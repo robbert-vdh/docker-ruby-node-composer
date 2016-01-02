@@ -3,7 +3,7 @@ FROM php:5.6-apache
 RUN apt-get update
 
 # Install build tools and libraries
-RUN apt-get install -y build-essential software-properties-common curl git python libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng12-dev libcurl4-gnutls-dev
+RUN apt-get install -y build-essential software-properties-common curl git python libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng12-dev libcurl4-gnutls-dev netcat
 
 # Install ruby
 RUN apt-get install -y ruby2.1 \
